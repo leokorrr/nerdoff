@@ -1,0 +1,121 @@
+.login {
+    position: relative;
+    display: flex;
+    // height: 100vh;
+
+    &__form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__form-ctn {
+        height: 100vh;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 992px) {
+            width: 50%;
+        }
+    }
+    
+    &__img-ctn {
+        width: 50%;
+        display: none;
+        align-items: center;
+
+        img {
+            width: 90%;
+        }
+
+        @media (min-width: 992px) {
+            display: flex;
+        }
+
+    }
+
+    &__title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 36px;
+        font-size: 36px;
+
+        @media (min-width: 992px) {
+            margin-bottom: 50px;
+            font-size: 40px;
+        }
+    }
+
+    &__form-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+
+        img {
+            width: 26px;
+            height: 26px;
+            margin-right: 10px;
+
+            @media (min-width: 992px) {
+                width: 30px;
+                height: 30px;
+                margin-right: 0;
+            }
+        }
+
+
+        &:first-of-type {
+            margin-bottom: 24px;
+        }
+
+        input {
+            width: 100%;
+            max-width: 324px;
+            font-size: 14px;
+
+            @media (min-width: 992px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__submit-btn-ctn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 36px;
+        
+        .project-btn {
+            width: 100%;
+            max-width: 250px;
+            font-size: 14px;
+
+            @media (min-width: 992px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__actions {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+        @media (min-width: 992px) {
+            font-size: 16px;
+        }
+
+        .link {
+            font-size: 14px;
+
+            @media (min-width: 992px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

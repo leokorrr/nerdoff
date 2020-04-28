@@ -1,0 +1,99 @@
+.header-1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.header-2 {
+    font-size: 34px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.header-3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.link {
+    color: $color-purple;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.project-btn {
+    border: none;
+    border-radius: 20px;
+    background-color: $color-purple;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    transition: .2s;
+    font-family: inherit;
+
+    &--red {
+        background-color: $color-red
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: lighten($color-purple, 2%);
+    }
+}
+
+.form-input {
+    font-family: inherit;
+    border: 1px solid #e2e2e2;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-select {
+    background-color: transparent;
+}
+
+.form-label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.form-textarea {
+    height: unset;
+    padding: 15px;
+    resize: none;
+}
+
+.tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    border: 1px solid $color-purple;
+    border-radius: 15px;
+    padding: 0 10px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(99, 32, 239, 0.1);
+    color: $color-purple;
+
+    &__close {
+        margin-left: 15px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
