@@ -1,7 +1,11 @@
 .header-1 {
-    font-size: 40px;
+    font-size: 36px;
     margin: 0;
     font-weight: normal;
+
+    @media (min-width: 992px) {
+        font-size: 40px;
+    }
 }
 
 .header-2 {
@@ -20,7 +24,11 @@
     color: $color-purple;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
+
+    @media (min-width: 992px) {
+        font-size: 16px;
+    }
 
     &:hover {
         text-decoration: underline;
@@ -32,10 +40,14 @@
     border-radius: 20px;
     background-color: $color-purple;
     color: white;
-    font-size: 16px;
     height: 30px;
     transition: .2s;
     font-family: inherit;
+    font-size: 14px;
+
+    @media (min-width: 992px) {
+        font-size: 16px;
+    }
 
     &--red {
         background-color: $color-red
@@ -50,10 +62,15 @@
 .form-input {
     font-family: inherit;
     border: 1px solid #e2e2e2;
-    height: 50px;
+    height: 40px;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 16px;
+    font-size: 14px;
+
+    @media (min-width: 992px) {
+        font-size: 16px;
+        height: 50px;
+    }
 
     &:focus {
         outline: none;
@@ -91,6 +108,8 @@
 
     &__close {
         margin-left: 15px;
+        display: flex;
+        align-items: center;
 
         &:hover {
             cursor: pointer;
