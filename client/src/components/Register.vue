@@ -67,9 +67,12 @@
                     <form>
                         <div class="register__form-input register__form-input--full-width">
                             <label for="name" class="sr-only">Name</label>
-                            <select id="gender" class="form-input form-select" placeholder="Gender">
-                                <option @click="selectPassion" class="red" v-bind:class="{ active: isActive }" v-for="(passion, index) of passions" :key="index" :value="passion">{{passion}}</option>
-                            </select>
+                            <!-- <select id="gender" class="form-input form-select register__multiselect" placeholder="Gender">
+                                <option @click="selectPassion" v-bind:class="{ active: isActive }" v-for="(passion, index) of passions" :key="index" :value="passion">
+                                    {{passion}}
+                                </option>
+                            </select> -->
+                            @TODO RETHINK PASSIONS UI
                         </div>
                         <div class="register__selected-tags">
                             <div class="tag">
@@ -107,9 +110,9 @@ export default {
             ],
             selectedPassions: [],
             isActive: false,
-            isVisibleFirst: true,
+            isVisibleFirst: false,
             isVisibleSecond: false,
-            isVisibleThird: false
+            isVisibleThird: true
         }
     },
     methods: {
@@ -117,11 +120,13 @@ export default {
             this.isActive = !this.isActive
             console.log('aaa')
         },
-        showSecond() {
+        showSecond(e) {
+            e.preventDefault();
             this.isVisibleFirst = false;
             this.isVisibleSecond = true;
         },
-        showThird() {
+        showThird(e) {
+            e.preventDefault();
             this.isVisibleSecond = false;
             this.isVisibleThird = true
         }
