@@ -26,7 +26,7 @@
                             <span class="sidemenu__link-text">My profile</span>
                         </a>
                     </li>
-                    <li class="sidemenu__nav-item">
+                    <li class="sidemenu__nav-item" @click="showFriends">
                         <a href="#" class="sidemenu__link">
                             <img src="../../img/icons/friends.svg" alt="post">
                             <span class="sidemenu__link-text">Friends</span>
@@ -36,6 +36,39 @@
                         <a href="#" class="sidemenu__link">
                             <img src="../../img/icons/logout.svg" alt="post">
                             <span class="sidemenu__link-text">Log out</span>
+                        </a>
+                    </li>
+                    <li class="sidemenu__nav-item"><button class="project-btn">Create post</button></li> 
+                </ul>
+            </div>
+            <div class="friends" v-if="isFriendsOpened">
+                <div class="friends__header">
+                    <img src="../../img/icons/arrow-back.svg" alt="" @click="hideFriends">
+                </div>
+                <div class="friends__header">@TODO ADD SEARCHBAR</div>
+                <ul class="friends__nav-list">
+                    <li class="friends__nav-item">
+                        <a href="#" class="friends__link">
+                            <img src="../../img/avatar.svg" alt="post">
+                            <span class="friends__link-text">Friend 1 <span class="friends__online"></span></span>
+                        </a>
+                    </li>
+                    <li class="friends__nav-item">
+                        <a href="#" class="friends__link">
+                            <img src="../../img/avatar.svg" alt="post">
+                            <span class="friends__link-text">Friend 2 <span class="friends__online"></span></span>
+                        </a>
+                    </li>
+                    <li class="friends__nav-item">
+                        <a href="#" class="friends__link">
+                            <img src="../../img/avatar.svg" alt="post">
+                            <span class="friends__link-text">Friend 3 <span class="friends__online"></span></span>
+                        </a>
+                    </li>
+                    <li class="friends__nav-item">
+                        <a href="#" class="friends__link">
+                            <img src="../../img/avatar.svg" alt="post">
+                            <span class="friends__link-text">Friend 4 <span class="friends__online"></span></span>
                         </a>
                     </li>
                     <li class="sidemenu__nav-item"><button class="project-btn">Create post</button></li> 
@@ -51,17 +84,25 @@ export default {
     name: 'Menu',
     data() {
         return {
-            isSidemenuOpened: false
+            isSidemenuOpened: false,
+            isFriendsOpened: false
         }
     },
     methods: {
         showSidemenu() {
-            this.isSidemenuOpened = true
+            this.isSidemenuOpened = true;
         },
         hideSidemenu(e) {
             if (e.target.classList.contains('sidemenu-ctn')) {
-                this.isSidemenuOpened = false
+                this.isSidemenuOpened = false;
+                this.isFriendsOpened = false;
             }
+        },
+        showFriends() {
+            this.isFriendsOpened = true;
+        },
+        hideFriends() {
+            this.isFriendsOpened = false;
         }
     }    
 }

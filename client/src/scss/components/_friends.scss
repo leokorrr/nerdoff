@@ -1,0 +1,87 @@
+.friends {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+    width: 220px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+
+    &__title {
+        margin: 0;
+        font-size: 20px;
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        border-bottom: 1px solid $color-grey;
+
+        img {
+            width: 26px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &__nav-list {
+        padding: 0;
+        list-style: none;
+        margin-top: 15px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 4px 20px;
+        
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    &__link-text {
+        font-size: 16px;
+        color: black;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-item {
+        transition: .2s;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .project-btn {
+            width: 100%;
+        }
+    }
+
+    &__online {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 20px;
+        background-color: $color-green;
+        margin-left: 15px;
+    }
+}
